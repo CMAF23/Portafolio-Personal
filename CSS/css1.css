@@ -168,7 +168,7 @@
     flex-wrap: nowrap;
     padding-bottom: 1rem;
     margin-top: -1px;
-    overflow-x: auto;
+    overflow-x: center;
     text-align: center;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -375,3 +375,5 @@
     );
   }
 }
+
+
