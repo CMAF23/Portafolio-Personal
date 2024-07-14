@@ -4,13 +4,11 @@
     justify-content: center;
     align-items: center;
     top: 90px;
-   
     display: flex;
-  justify-content: space-around;
-  
-  }
-  
-  .container .glass {
+    justify-content: space-around;
+}
+
+.container .glass {
     position: relative;
     width: 180px;
     height: 200px;
@@ -24,15 +22,11 @@
     border-radius: 10px;
     margin: 0 -45px;
     backdrop-filter: blur(10px);
-    
-  }
-  
-  .container:hover .glass {
-    transform: rotate(0deg);
-    margin: 0 10px;
-  }
-  
-  .container .glass::before {
+}
+
+
+
+.container .glass::before {
     content: attr(data-text);
     position: absolute;
     bottom: 0;
@@ -43,20 +37,18 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    
+}
 
-  }
-  .container:a{
+.container:a {
     display: none;
-  }
-  
-  .container .glass svg {
+}
+
+.container .glass svg {
     font-size: 2.5em;
     fill: #fff;
-  }
-  
-  .glass {
+}
+
+.glass {
     width: 50%; /* Ancho del 50% de la ventana */
     /* ... otros estilos ... */
-  }
-  
+}
