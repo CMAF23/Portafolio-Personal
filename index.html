@@ -88,6 +88,7 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
 .obra h3{font-family:var(--display);font-weight:600;font-size:clamp(1.22rem,2.4vw,1.6rem);letter-spacing:-.01em}
 .vivo{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--jade);border:1px solid rgba(74,222,150,.34);border-radius:999px;padding:4px 11px;white-space:nowrap}
 .obra p{color:var(--humo)}
+.vivo.tenue{color:var(--humo);border-color:var(--linea)}
 .logro{display:grid;gap:4px;border-left:2px solid var(--jade);padding:2px 0 2px 16px}
 .logro b{font-family:var(--display);font-size:1.02rem;font-weight:600;color:var(--papel)}
 .logro span{color:var(--humo);font-size:.92rem}
@@ -262,21 +263,39 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
       <article class="obra">
         <header>
           <h3>OBEX Fidelidad · tarjetas en la cartera del teléfono</h3>
+          <span class="vivo tenue">Demo en vivo</span>
         </header>
-        <p>Tarjetas de lealtad que se guardan en Apple Wallet y Google Wallet: el cliente deja de cargar un cartoncito y el negocio ve quién vuelve.</p>
+        <p>Tarjetas de lealtad que se guardan en Apple Wallet y Google Wallet: el cliente deja de cargar el cartoncito de los sellos y el negocio ve quién vuelve y quién no.</p>
+        <div class="logro"><b>El cartoncito ya no se pierde ni se moja</b><span>El pase vive en el mismo lugar donde el cliente trae su boleto de avión, con la marca del negocio, y avisa solo cuando falta un sello para el premio.</span></div>
+        <figure class="pantalla">
+          <picture>
+            <source type="image/webp" srcset="img/fidelidad.webp">
+            <img src="img/fidelidad.jpg" width="1000" height="625" loading="lazy" decoding="async" alt="La demo de OBEX Fidelidad: la misma tarjeta en Apple Wallet y en Google Wallet">
+          </picture>
+          <figcaption>obex.com.mx/fidelidad, se puede probar ahora</figcaption>
+        </figure>
         <div class="hizo">
-          <div>Pases firmados para las dos carteras.</div>
-          <div>Sellos y recompensas desde un panel.</div>
+          <div>Pases firmados para las dos carteras, con la marca y los colores de cada negocio.</div>
+          <div>Sellos y recompensas desde un panel: el mostrador suma el sello y la tarjeta del cliente se actualiza sola.</div>
+          <div>Notificaciones gratis en Google Wallet; en Apple el permiso de desarrollador se paga aparte.</div>
         </div>
-        <div class="chips"><span class="chip">Apple Wallet</span><span class="chip">Google Wallet</span><span class="chip">Node.js</span></div>
+        <div class="chips"><span class="chip">Apple Wallet</span><span class="chip">Google Wallet</span><span class="chip">Node.js</span><span class="chip">Pases firmados</span></div>
+        <a class="ver" href="https://obex.com.mx/fidelidad.html" target="_blank" rel="noopener" aria-label="Probar la demo de OBEX Fidelidad, se abre en otra pestaña">Probar la demo <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="obra">
         <header>
           <h3>Herramientas propias</h3>
+          <span class="vivo tenue">Uso diario</span>
         </header>
-        <p>Lo que uno acaba construyendo cuando ya tiene varios sistemas vivos: pruebas que abren la página en un navegador de verdad y avisan si no pinta, un puente para pasar archivos del celular a la computadora, un catálogo donde un cliente palomea lo que quiere vender.</p>
-        <div class="chips"><span class="chip">Automatización</span><span class="chip">Pruebas</span><span class="chip">Linux</span><span class="chip">systemd</span></div>
+        <p>Lo que uno acaba construyendo cuando ya tiene varios sistemas vivos y nadie más los va a cuidar.</p>
+        <div class="logro"><b>Una de ellas encontró una tienda caída que las pruebas normales no veían</b><span>La tienda respondía bien a todo lo que se le preguntaba, pero la página se quedaba en blanco para el cliente. La prueba que abre un navegador de verdad lo vio en un minuto.</span></div>
+        <div class="hizo">
+          <div>Pruebas que abren la página en un navegador real, miden si algo se sale de la pantalla y fallan si no pinta.</div>
+          <div>Un puente para pasar archivos del celular a la computadora acercándolos, sin cables ni nube.</div>
+          <div>Un catálogo donde el cliente palomea lo que quiere vender y yo recibo la lista lista para cargar.</div>
+        </div>
+        <div class="chips"><span class="chip">Automatización</span><span class="chip">Pruebas en navegador</span><span class="chip">Linux</span><span class="chip">systemd</span></div>
       </article>
 
     </div>
