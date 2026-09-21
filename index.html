@@ -25,6 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
+  color-scheme:dark;   /* el navegador pinta barras y controles oscuros, y no destella blanco al abrir */
   --tinta:#0B0F0E;        /* el fondo: verde tan oscuro que parece negro */
   --papel:#F2F4F1;
   --humo:#9AA69F;
@@ -35,7 +36,7 @@
   --ui:"Inter",system-ui,-apple-system,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;background:#0B0F0E}
 body{background:var(--tinta);color:var(--papel);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{width:min(1080px,92vw);margin:0 auto}
 a{color:inherit}
