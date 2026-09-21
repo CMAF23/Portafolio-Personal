@@ -47,7 +47,13 @@ a{color:inherit}
 .barra nav{display:flex;gap:22px;font-size:.92rem}
 .barra nav a{color:var(--humo);text-decoration:none;transition:color .2s}
 .barra nav a:hover{color:var(--papel)}
-@media (max-width:760px){.barra nav{display:none}}
+@media (max-width:760px){
+  .barra .wrap{gap:10px}
+  .marca{flex:none;font-size:1rem}
+  .barra nav{flex:1;min-width:0;gap:7px;overflow-x:auto;scrollbar-width:none;padding-bottom:1px;justify-content:flex-start}
+  .barra nav::-webkit-scrollbar{display:none}
+  .barra nav a{white-space:nowrap;font-size:.8rem;border:1px solid var(--linea);border-radius:999px;padding:6px 11px}
+}
 
 .portada{padding:clamp(52px,11vw,120px) 0 clamp(38px,7vw,72px);position:relative;overflow:hidden}
 .portada::before{content:"";position:absolute;right:-14%;top:-36%;width:62vw;max-width:680px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(74,222,150,.16),transparent 62%);pointer-events:none}
