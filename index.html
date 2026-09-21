@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manuel Acevedo · Desarrollador</title>
-<meta name="description" content="Construyo sistemas que un negocio usa todos los días: tiendas en línea, cobros con tarjeta, bots de WhatsApp y paneles. Node.js, MongoDB, Stripe y WhatsApp Cloud API.">
+<title>Manuel Flores · Desarrollador y líder de proyectos</title>
+<meta name="description" content="Dirijo y construyo sistemas que un negocio usa todos los días: tiendas en línea, cobros con tarjeta, bots de WhatsApp y paneles. Del primer acuerdo con el cliente hasta el servidor donde queda corriendo.">
 <meta name="theme-color" content="#0B0F0E">
-<meta property="og:title" content="Manuel Acevedo · Desarrollador">
-<meta property="og:description" content="Sistemas en producción: una florería que vende en línea, un bot que cobra por WhatsApp a 1,090 clientes, inscripciones a carreras.">
+<meta property="og:title" content="Manuel Flores · Desarrollador y líder de proyectos">
+<meta property="og:description" content="Llevo el proyecto completo: lo acuerdo con el cliente, lo construyo y respondo por él. Una florería que vende en línea, un bot que cobra por WhatsApp a 1,090 clientes, inscripciones a carreras.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://cmaf23.github.io/Portafolio-Personal/">
 <link rel="icon" href="img/favicon.ico" sizes="any">
@@ -117,34 +117,41 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
 .cierre .acciones{justify-content:center}
 .pie{border-top:1px solid var(--linea);padding:26px 0;color:var(--humo);font-size:.86rem}
 .pie .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+:focus-visible{outline:3px solid var(--jade);outline-offset:3px;border-radius:6px}
+.saltar{position:absolute;left:-9999px;top:0;z-index:40;background:var(--jade);color:#06231A;font-weight:700;padding:12px 20px;border-radius:0 0 12px 0;text-decoration:none}
+.saltar:focus{left:0}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<div class="barra">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra">
   <div class="wrap">
-    <a class="marca" href="#"><b>Manuel</b> Acevedo</a>
-    <nav>
+    <a class="marca" href="#" aria-label="Inicio"><b>Manuel</b> Flores</a>
+    <nav aria-label="Secciones de la página">
       <a href="#trabajo">Lo que he construido</a>
       <a href="#sobre">Quién soy</a>
       <a href="#herramientas">Con qué</a>
       <a href="#contacto">Contacto</a>
-      <a href="https://github.com/CMAF23" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/CMAF23" target="_blank" rel="noopener" aria-label="Mi GitHub, se abre en otra pestaña">GitHub</a>
     </nav>
   </div>
-</div>
+</header>
 
-<header class="portada">
+<main id="contenido">
+
+<section class="portada">
   <div class="wrap">
     <div class="hero">
       <div>
     <span class="ojo"><i></i> Disponible para proyectos</span>
     <h1>Construyo sistemas que un negocio <em>usa todos los días</em>.</h1>
-    <p class="lead">Desarrollador, de Oaxaca. No hago páginas bonitas que nadie abre: hago tiendas que cobran con tarjeta, bots de WhatsApp que levantan pedidos solos y paneles donde el dueño ve su dinero. Todo lo que está aquí abajo está funcionando, con clientes de verdad usándolo hoy.</p>
+    <p class="lead">Desarrollador y líder de proyectos, de Oaxaca. No solo escribo el código: me siento con el dueño, acuerdo qué se va a hacer, lo construyo, lo pongo en línea y respondo por él cuando ya está trabajando. Todo lo que está aquí abajo está funcionando, con clientes de verdad usándolo hoy.</p>
     <div class="acciones">
       <a class="btn lleno" href="#trabajo">Ver lo que he construido</a>
-      <a class="btn hueco" href="https://github.com/CMAF23" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn hueco" href="https://github.com/CMAF23" target="_blank" rel="noopener" aria-label="Mi GitHub, se abre en otra pestaña">GitHub</a>
       <a class="btn hueco" href="#contacto">Hablemos</a>
     </div>
       </div>
@@ -163,7 +170,7 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
       <div class="cifra"><b>700+</b><span>pruebas automáticas cuidándolos</span></div>
     </div>
   </div>
-</header>
+</section>
 
 <section id="trabajo">
   <div class="wrap">
@@ -192,7 +199,7 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
           <div>Panel con lo que la dueña necesita a las siete de la mañana: qué sale hoy, qué falta armar, qué no se ha pagado.</div>
         </div>
         <div class="chips"><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Stripe Connect</span><span class="chip">WhatsApp Cloud API</span><span class="chip">Cloudinary</span><span class="chip">Render</span></div>
-        <a class="ver" href="https://floreriaaysel.com.mx" target="_blank" rel="noopener">Ver la tienda →</a>
+        <a class="ver" href="https://floreriaaysel.com.mx" target="_blank" rel="noopener" aria-label="Ver la tienda de Florería Aysel, se abre en otra pestaña">Ver la tienda <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="obra">
@@ -235,7 +242,7 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
           <div>Pantalla para inscribir en la puerta el día del evento.</div>
         </div>
         <div class="chips"><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Stripe</span></div>
-        <a class="ver" href="https://dinamitarunning.com.mx" target="_blank" rel="noopener">Ver el sitio →</a>
+        <a class="ver" href="https://dinamitarunning.com.mx" target="_blank" rel="noopener" aria-label="Ver el sitio de Dinamita Running, se abre en otra pestaña">Ver el sitio <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="obra">
@@ -268,11 +275,12 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
     <div class="sobre">
       <div>
         <p>Soy Manuel, de Oaxaca, y estudio Ingeniería en Computación. Lo que sé de verdad no lo aprendí en un salón: lo aprendí poniendo sistemas en manos de gente que los necesita para trabajar, y quedándome a arreglarlos cuando algo falla un martes a las siete de la mañana.</p>
-        <p>Trabajo bajo mi propia marca, <b>OBEX</b>. Ahí es donde salen los sistemas de arriba: un negocio me cuenta cómo trabaja hoy, y yo le entrego algo que lo hace solo.</p>
+        <p>Trabajo bajo mi propia marca, <b>OBEX</b>, y ahí soy quien lleva el proyecto: el que lo acuerda con el cliente, el que decide cómo se va a hacer, el que reparte el trabajo y el que da la cara cuando hay que entregar. Un negocio me cuenta cómo trabaja hoy, y yo le entrego algo que lo hace solo.</p>
       </div>
       <div class="valores">
         <div><h4>Autodidacta</h4><p>Casi todo lo que uso lo aprendí solo, contra un problema real que tenía que quedar funcionando.</p></div>
-        <div><h4>Le entro a todo el sistema</h4><p>De la pantalla que ve el cliente al servidor, la base de datos, el cobro y el servidor donde vive.</p></div>
+        <div><h4>Llevo el proyecto, no solo el código</h4><p>Acuerdo el alcance, pongo fechas, decido cómo se arma y voy avisando cómo va. El cliente trata con una sola persona.</p></div>
+        <div><h4>Le entro a todo el sistema</h4><p>De la pantalla que ve el cliente a la base de datos, el cobro y el servidor donde vive.</p></div>
         <div><h4>Cuido lo que entrego</h4><p>Los sistemas que hago traen pruebas automáticas: si algo se rompe, me entero yo antes que el cliente.</p></div>
       </div>
     </div>
@@ -332,14 +340,16 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
     <p class="sub">Eso es justo lo que hago: tomar lo que hoy se resuelve con libretas, mensajes sueltos y llamadas, y dejarlo funcionando solo.</p>
     <div class="acciones">
       <a class="btn lleno" href="mailto:obex23.com@gmail.com">Escríbeme</a>
-      <a class="btn hueco" href="https://github.com/CMAF23" target="_blank" rel="noopener">Ver mi GitHub</a>
+      <a class="btn hueco" href="https://github.com/CMAF23" target="_blank" rel="noopener" aria-label="Mi GitHub, se abre en otra pestaña">Ver mi GitHub</a>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer class="pie">
   <div class="wrap">
-    <span>Manuel Acevedo · Oaxaca, México</span>
+    <span>Manuel Flores · Oaxaca, México</span>
     <span>Hecho a mano, sin plantillas.</span>
   </div>
 </footer>
