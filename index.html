@@ -111,6 +111,13 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
 .valores h4{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:4px}
 .valores p{color:var(--humo);font-size:.94rem}
 @media (min-width:880px){.sobre{grid-template-columns:1.1fr .9fr;gap:52px}.valores{gap:22px}}
+.pasos{display:grid;gap:18px;margin-top:34px;grid-template-columns:1fr;counter-reset:paso}
+.paso{background:var(--carta);border:1px solid var(--linea);border-radius:18px;padding:22px 22px 24px;display:grid;gap:8px;align-content:start}
+.paso::before{counter-increment:paso;content:counter(paso,decimal-leading-zero);font-family:var(--display);font-size:.95rem;color:var(--jade);letter-spacing:.06em}
+.paso h4{font-family:var(--display);font-weight:600;font-size:1.08rem}
+.paso p{color:var(--humo);font-size:.93rem}
+@media (min-width:700px){.pasos{grid-template-columns:1fr 1fr}}
+@media (min-width:1060px){.pasos{grid-template-columns:repeat(4,1fr);gap:16px}}
 .saber{display:grid;gap:26px;margin-top:34px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
 .saber h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--jade);margin-bottom:12px}
 .saber ul{list-style:none;padding:0;display:grid;gap:7px;color:var(--humo);font-size:.95rem}
@@ -136,6 +143,7 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
     <nav aria-label="Secciones de la página">
       <a href="#trabajo">Lo que he construido</a>
       <a href="#sobre">Quién soy</a>
+      <a href="#proceso">Cómo trabajo</a>
       <a href="#herramientas">Con qué</a>
       <a href="#contacto">Contacto</a>
       <a href="https://github.com/CMAF23" target="_blank" rel="noopener" aria-label="Mi GitHub, se abre en otra pestaña">GitHub</a>
@@ -288,6 +296,31 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
         <div><h4>Llevo el proyecto, no solo el código</h4><p>Acuerdo el alcance, pongo fechas, decido cómo se arma y voy avisando cómo va. El cliente trata con una sola persona.</p></div>
         <div><h4>Le entro a todo el sistema</h4><p>De la pantalla que ve el cliente a la base de datos, el cobro y el servidor donde vive.</p></div>
         <div><h4>Cuido lo que entrego</h4><p>Los sistemas que hago traen pruebas automáticas: si algo se rompe, me entero yo antes que el cliente.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="wrap">
+    <h2 class="titulo">Cómo llevo un proyecto</h2>
+    <p class="sub">El cliente trata con una sola persona de principio a fin. Esa persona soy yo.</p>
+    <div class="pasos">
+      <div class="paso">
+        <h4>Nos sentamos y lo acordamos</h4>
+        <p>Primero entiendo cómo trabajan hoy: quién hace qué, dónde se les va el tiempo y qué les cuesta dinero. De ahí sale qué se va a hacer, qué no, y para cuándo.</p>
+      </div>
+      <div class="paso">
+        <h4>Lo construyo y lo voy enseñando</h4>
+        <p>No desaparezco un mes. Voy entregando pedazos que ya se pueden tocar, y el dueño va diciendo si así lo quería antes de que sea tarde para cambiarlo.</p>
+      </div>
+      <div class="paso">
+        <h4>Lo entrego funcionando</h4>
+        <p>Queda en línea, con su dominio, su cobro conectado a la cuenta del negocio y la gente del mostrador sabiendo usarlo. No entrego archivos, entrego algo que ya está trabajando.</p>
+      </div>
+      <div class="paso">
+        <h4>Me quedo respondiendo</h4>
+        <p>Si algo se rompe un domingo, me escriben a mí. Los sistemas traen pruebas automáticas para que yo me entere antes que el cliente.</p>
       </div>
     </div>
   </div>
