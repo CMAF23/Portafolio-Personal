@@ -1,265 +1,282 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>Portafolio -MANUEL-</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/features/">
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manuel Acevedo · Desarrollador</title>
+<meta name="description" content="Construyo sistemas que un negocio usa todos los días: tiendas en línea, cobros con tarjeta, bots de WhatsApp y paneles. Node.js, MongoDB, Stripe y WhatsApp Cloud API.">
+<meta name="theme-color" content="#0B0F0E">
+<meta property="og:title" content="Manuel Acevedo · Desarrollador">
+<meta property="og:description" content="Sistemas en producción: una florería que vende en línea, un bot que cobra por WhatsApp a 1,090 clientes, inscripciones a carreras.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#0B0F0E;        /* el fondo: verde tan oscuro que parece negro */
+  --papel:#F2F4F1;
+  --humo:#9AA69F;
+  --linea:rgba(242,244,241,.12);
+  --jade:#4ADE96;         /* el acento, reservado para lo que está vivo */
+  --carta:#111715;
+  --display:"Fraunces",Georgia,serif;
+  --ui:"Inter",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--tinta);color:var(--papel);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{width:min(1080px,92vw);margin:0 auto}
+a{color:inherit}
 
-    
+.barra{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(11,15,14,.72);border-bottom:1px solid var(--linea)}
+.barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.marca{font-family:var(--display);font-size:1.15rem;letter-spacing:-.01em;text-decoration:none}
+.marca b{font-weight:600}
+.barra nav{display:flex;gap:22px;font-size:.92rem}
+.barra nav a{color:var(--humo);text-decoration:none;transition:color .2s}
+.barra nav a:hover{color:var(--papel)}
+@media (max-width:760px){.barra nav{display:none}}
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+.portada{padding:clamp(52px,11vw,120px) 0 clamp(38px,7vw,72px);position:relative;overflow:hidden}
+.portada::before{content:"";position:absolute;right:-14%;top:-36%;width:62vw;max-width:680px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(74,222,150,.16),transparent 62%);pointer-events:none}
+.ojo{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--jade);font-weight:600}
+.ojo i{width:7px;height:7px;border-radius:50%;background:var(--jade);box-shadow:0 0 0 0 rgba(74,222,150,.55);animation:latir 2.4s infinite}
+@keyframes latir{70%{box-shadow:0 0 0 9px rgba(74,222,150,0)}100%{box-shadow:0 0 0 0 rgba(74,222,150,0)}}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.3rem,7vw,4.5rem);line-height:1.03;letter-spacing:-.025em;margin:18px 0 0;text-wrap:balance}
+h1 em{font-style:italic;color:var(--jade)}
+.lead{color:var(--humo);font-size:clamp(1rem,2.1vw,1.2rem);max-width:62ch;margin-top:20px}
+.acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;transition:transform .18s,background .18s,border-color .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn.lleno{background:var(--jade);color:#06231A}
+.btn.hueco{border-color:var(--linea)}
+.btn.hueco:hover{border-color:var(--jade)}
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:18px;overflow:hidden;margin-top:clamp(34px,6vw,58px)}
+.cifra{background:var(--tinta);padding:22px 20px}
+.cifra b{display:block;font-family:var(--display);font-size:clamp(1.75rem,3.4vw,2.5rem);line-height:1;font-weight:600}
+.cifra span{display:block;color:var(--humo);font-size:.84rem;margin-top:8px}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="CSS/css1.css">
-    <script type="module" src="JAVAScript/jaava1.js"></script>
-  </head>
-  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
+.titulo{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:-.02em;text-wrap:balance}
+.sub{color:var(--humo);margin-top:10px;max-width:64ch}
 
+.obras{display:grid;gap:18px;margin-top:36px}
+.obra{background:var(--carta);border:1px solid var(--linea);border-radius:20px;padding:clamp(20px,3vw,30px);display:grid;gap:14px;align-content:start;transition:border-color .22s,transform .22s}
+.obra:hover{border-color:rgba(74,222,150,.34);transform:translateY(-2px)}
+.obra header{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.obra h3{font-family:var(--display);font-weight:600;font-size:clamp(1.22rem,2.4vw,1.6rem);letter-spacing:-.01em}
+.vivo{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--jade);border:1px solid rgba(74,222,150,.34);border-radius:999px;padding:4px 11px;white-space:nowrap}
+.obra p{color:var(--humo)}
+.hizo{display:grid;gap:8px}
+.hizo div{display:flex;gap:10px;font-size:.94rem}
+.hizo div::before{content:"→";color:var(--jade);flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:.78rem;color:var(--humo);border:1px solid var(--linea);border-radius:999px;padding:5px 11px}
+.ver{color:var(--jade);text-decoration:none;font-weight:600;font-size:.94rem;border-bottom:1px solid transparent;width:fit-content}
+.ver:hover{border-bottom-color:var(--jade)}
+@media (min-width:880px){.obras{grid-template-columns:1fr 1fr}.obra.ancha{grid-column:1/-1}}
 
-    <!-- Example Code -->
-    
+.saber{display:grid;gap:26px;margin-top:34px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.saber h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--jade);margin-bottom:12px}
+.saber ul{list-style:none;padding:0;display:grid;gap:7px;color:var(--humo);font-size:.95rem}
 
-    
-        
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+.cierre{text-align:center}
+.cierre .sub{margin-left:auto;margin-right:auto}
+.cierre .acciones{justify-content:center}
+.pie{border-top:1px solid var(--linea);padding:26px 0;color:var(--humo);font-size:.86rem}
+.pie .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
 
- 
-      
-
-          
-
-
-
-
-
-
-
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          
-          <div   class="navbar-nav" >
-            <a class="nav-link active" aria-current="page" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
-              </svg> Home</a>
-            <a class="nav-link" href="https://github.com/CMAF23" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-              </svg> GitHub</a>
-            <a class="nav-link" href="otraspags/contacto.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
-                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
-              </svg> Contacto</a>
-            
-              
-          </div>
-          
-        </div>
-        
-      </div>
-
-      
-      
+<div class="barra">
+  <div class="wrap">
+    <a class="marca" href="#"><b>Manuel</b> Acevedo</a>
+    <nav>
+      <a href="#trabajo">Lo que he construido</a>
+      <a href="#herramientas">Con qué</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://github.com/CMAF23" target="_blank" rel="noopener">GitHub</a>
     </nav>
-    
-      
-    <!-- End Example Code -->
-  </body>
-  <header>
-    <div class="centered-text" style="width: 18rem;" >
-        <img src="img/yo1.jpg" class="card-img-top" alt="..." style="border-radius: 100%;">
-        <div class="card-body">
-            <div class="centered-text">
-                <h3 class="card-title">MANUEL</h3>
-                <h6 class="card-title">Desarrollador Web</h6>
-            </div>
-            
-            
-            <style>
-                .centered-text {
-                    text-align: center;
-                    margin: 3ch auto;
-                }
-                .mi-linea {
-        color: #0056b2; /* Cambia el color según tus preferencias */
-        border: 1px solid #ccc; /* Cambia el grosor y estilo de línea */
-                }
-            </style>
-            
-          
-            <hr class="mi-linea">
-            <div class="table-responsive">
-                
-              </div>
+  </div>
+</div>
 
+<header class="portada">
+  <div class="wrap">
+    <span class="ojo"><i></i> Disponible para proyectos</span>
+    <h1>Construyo sistemas que un negocio <em>usa todos los días</em>.</h1>
+    <p class="lead">Desarrollador, de Oaxaca. No hago páginas bonitas que nadie abre: hago tiendas que cobran con tarjeta, bots de WhatsApp que levantan pedidos solos y paneles donde el dueño ve su dinero. Todo lo que está aquí abajo está funcionando, con clientes de verdad usándolo hoy.</p>
+    <div class="acciones">
+      <a class="btn lleno" href="#trabajo">Ver lo que he construido</a>
+      <a class="btn hueco" href="https://github.com/CMAF23" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn hueco" href="#contacto">Hablemos</a>
+    </div>
 
-        </div>
-      </div>
-      <style>
-        .table-container {
-            overflow-x: auto;
-            text-align: center;
-            align-content: center;
-                    margin: 3ch auto;
-        }
-        .table {
-            width: 100%;
-        }
-        
-    </style>
-    
-    <div class="row">
-      <div class="col-lg-4">
-        <div style="text-align: center;">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <image href="#" width="100%" height="100%" />
-              <rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
-
-          </svg>
-      </div>
-      
-        <h2 style="text-align: center;" class="fw-normal">Curriculo</h2>
-        <p>¡Hola! Mi nombre es Manuel Acevedo, y soy un apasionado programador con un enfoque en el desarrollo web. A continuación, te presento un resumen de mi perfil.</p>
-        <div style="display: flex; justify-content: center;">
-          <p><a class="btn btn-secondary" href=".//otraspags/SOBREMI.html">Ver detalles »</a></p>
-      </div>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <div style="text-align: center;">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
-          </svg>
-      </div>
-      
-        <h2 style="text-align: center;" class="fw-normal">Sobre Mi</h2>
-        <p>Hola mi nombre es Manuel Acevedo, tengo 18 años, soy un joven apasionado por el desarrollo web, manejando varios lenguajes de programacion ya mencionados en este portafolio, asi como comprometido con las tareas que se me asignen, entragando un trabjo con la mejor solución posible encontrada. <br> <br>Asi como el interes por las tecnologias emergentes y la inteligencia artificial, tomando siempre en cuenta la satisfaccion y aprobacion de mi cliente para la utilización de las mismas.  </p>
-        <div style="display: flex; justify-content: center;">
-          
-      </div>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <div style="text-align: center;">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
-          </svg>
-      </div>
-      
-        <h2 style="text-align: center;" class="fw-normal">Lenguajes de Programación manejados</h2>
-        
-        <b><li>Java</li>
-        <li>C</li>
-        <li>C#</li>
-        <li>JavaScript</li>
-        
-        <li>MySQL</li>
-        <li>Kotlin</li></b>
-        <div style="text-align: center;">
-          <div style="display: flex; justify-content: center;">
-            
-        </div>
-        
-        
-      </div>
-      
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-      <div class="feature col">
-        <!--<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
-        </div>-->
-        
-          <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-        </a>
-      </div>
+    <div class="cifras">
+      <div class="cifra"><b>6</b><span>sistemas en producción</span></div>
+      <div class="cifra"><b>1,090</b><span>clientes atendidos por un bot que hice</span></div>
+      <div class="cifra"><b>3</b><span>negocios cobrando en línea con mi código</span></div>
+      <div class="cifra"><b>700+</b><span>pruebas automáticas cuidándolos</span></div>
     </div>
   </div>
-  <div class="b-example-divider"></div>
-  <div class="container px-4 py-5" id="hanging-icons">
-    <h2 style=" text-align: center;
-                margin: 3ch auto;" class="pb-2 border-bottom">PROYECTOS</h2 >
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-      <div class="col d-flex align-items-start">
-        <!--<div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
-        </div>-->
-        <div>
-          <div style="display: flex; justify-content: center;">
-            <h3 class="fs-2 text-body-emphasis">Aun no hay</h3>
-        </div>
-          
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <div style="display: flex; justify-content: center;">
-            <a href="#" class="btn btn-primary">
-              Primary button
-            </a>
-        </div>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <!--<div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
-        </div>-->
-        <div>
-          <div style="display: flex; justify-content: center;">
-            <h3 class="fs-2 text-body-emphasis">Aun no hay</h3>
-        </div>
-        <div style="display: flex; justify-content: center;">
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+</header>
 
+<section id="trabajo">
+  <div class="wrap">
+    <h2 class="titulo">Lo que he construido</h2>
+    <p class="sub">Cada uno resuelve un problema que le costaba dinero o tiempo a alguien.</p>
 
-      </div>
-          
+    <div class="obras">
 
-          <div style="display: flex; justify-content: center;">
-            <a href="#" class="btn btn-primary">
-              Primary button
-            </a>
+      <article class="obra ancha">
+        <header>
+          <h3>Florería Aysel · el sistema completo</h3>
+          <span class="vivo">En producción</span>
+        </header>
+        <p>Una florería con tres sucursales que vendía solo por mensajes sueltos. Hoy tiene tienda en línea, cobro con tarjeta que deposita directo en su banco, un panel donde ven los pedidos del día y un asistente de WhatsApp que toma pedidos solo, a cualquier hora.</p>
+        <div class="hizo">
+          <div>Tienda con catálogo por sucursal, existencias, ediciones de temporada y entrega a domicilio con pin de mapa.</div>
+          <div>Cobro en línea con Stripe Connect: el dinero llega a la cuenta de la florería, no a la mía.</div>
+          <div>Asistente en la API oficial de WhatsApp: fotos de los ramos, botones, listas, recordatorio de pago y avisos de cómo va el pedido.</div>
+          <div>Panel con lo que la dueña necesita a las siete de la mañana: qué sale hoy, qué falta armar, qué no se ha pagado.</div>
         </div>
+        <div class="chips"><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Stripe Connect</span><span class="chip">WhatsApp Cloud API</span><span class="chip">Cloudinary</span><span class="chip">Render</span></div>
+        <a class="ver" href="https://floreriaaysel.com.mx" target="_blank" rel="noopener">Ver la tienda →</a>
+      </article>
+
+      <article class="obra">
+        <header>
+          <h3>León Telecom · cobranza por WhatsApp</h3>
+          <span class="vivo">En producción</span>
+        </header>
+        <p>Un proveedor de internet que perseguía más de mil pagos al mes a mano. Ahora el bot avisa del corte, manda el enlace de pago y reactiva el servicio en cuanto el cliente paga.</p>
+        <div class="hizo">
+          <div>Avisos y recordatorios de pago, con todo dentro de la conversación de WhatsApp.</div>
+          <div>Reactivación automática contra la API del proveedor de red, sin que nadie toque un botón.</div>
+          <div>Panel con usuarios y permisos por casilla para el equipo de la oficina.</div>
         </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <!--<div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
-        </div>-->
-        <div>
-          <div style="display: flex; justify-content: center;">
-            <h3 class="fs-2 text-body-emphasis">Aun no hay</h3>
+        <div class="chips"><span class="chip">Node.js</span><span class="chip">WhatsApp</span><span class="chip">API de terceros</span><span class="chip">Cobros</span></div>
+      </article>
+
+      <article class="obra">
+        <header>
+          <h3>Dinamita Running · inscripciones a carreras</h3>
+          <span class="vivo">En producción</span>
+        </header>
+        <p>Inscripciones en línea para carreras, con el cobro entrando directo a la cuenta del organizador y el corte de caja calculándose solo.</p>
+        <div class="hizo">
+          <div>Registro de corredores, categorías y pago con tarjeta.</div>
+          <div>Carta de deslinde firmada desde el teléfono.</div>
+          <div>Pantalla para inscribir en la puerta el día del evento.</div>
         </div>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <div style="display: flex; justify-content: center;">
-            <a href="#" class="btn btn-primary">
-              Primary button
-            </a>
+        <div class="chips"><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Stripe</span></div>
+        <a class="ver" href="https://dinamitarunning.com.mx" target="_blank" rel="noopener">Ver el sitio →</a>
+      </article>
+
+      <article class="obra">
+        <header>
+          <h3>Mixtli · red social universitaria</h3>
+        </header>
+        <p>Una red social para la Universidad Tecnológica de la Mixteca: entras con tu correo de la escuela y ves lo que pasa en tu campus, no en todo internet.</p>
+        <div class="hizo">
+          <div>Aplicación web instalable, pensada para el teléfono.</div>
+          <div>Verificación por correo institucional y moderación de contenido.</div>
+          <div>Una piel distinta según la carrera de quien entra.</div>
         </div>
+        <div class="chips"><span class="chip">PWA</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Moderación</span></div>
+      </article>
+
+      <article class="obra">
+        <header>
+          <h3>OBEX Fidelidad · tarjetas en la cartera del teléfono</h3>
+        </header>
+        <p>Tarjetas de lealtad que se guardan en Apple Wallet y Google Wallet: el cliente deja de cargar un cartoncito y el negocio ve quién vuelve.</p>
+        <div class="hizo">
+          <div>Pases firmados para las dos carteras.</div>
+          <div>Sellos y recompensas desde un panel.</div>
         </div>
-      </div>
+        <div class="chips"><span class="chip">Apple Wallet</span><span class="chip">Google Wallet</span><span class="chip">Node.js</span></div>
+      </article>
+
+      <article class="obra">
+        <header>
+          <h3>Herramientas propias</h3>
+        </header>
+        <p>Lo que uno acaba construyendo cuando ya tiene varios sistemas vivos: pruebas que abren la página en un navegador de verdad y avisan si no pinta, un puente para pasar archivos del celular a la computadora, un catálogo donde un cliente palomea lo que quiere vender.</p>
+        <div class="chips"><span class="chip">Automatización</span><span class="chip">Pruebas</span><span class="chip">Linux</span><span class="chip">systemd</span></div>
+      </article>
+
     </div>
   </div>
+</section>
 
-
-
-
-  </header>
-
-  <footer>
-    <div class="container">
-      <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">GitHub</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contactos</a></li>
+<section id="herramientas">
+  <div class="wrap">
+    <h2 class="titulo">Con qué trabajo</h2>
+    <p class="sub">Lo primero es lo que uso todos los días y con lo que hay cosas mías funcionando ahora mismo.</p>
+    <div class="saber">
+      <div>
+        <h4>Todos los días</h4>
+        <ul>
+          <li>JavaScript (Node.js y navegador)</li>
+          <li>Express y APIs propias</li>
+          <li>MongoDB</li>
+          <li>HTML y CSS a mano</li>
+          <li>Git</li>
         </ul>
-        <p class="text-center text-body-secondary">&copy; 2024, TPO.Manuel Acevedo</p>
-      </footer>
+      </div>
+      <div>
+        <h4>Cobros e integraciones</h4>
+        <ul>
+          <li>Stripe y Stripe Connect</li>
+          <li>Webhooks firmados</li>
+          <li>WhatsApp Cloud API (Meta)</li>
+          <li>Cloudinary</li>
+          <li>APIs de terceros</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Poner cosas en línea</h4>
+        <ul>
+          <li>Render y dominios propios</li>
+          <li>Linux y línea de comandos</li>
+          <li>Aplicaciones instalables (PWA)</li>
+          <li>Pruebas automatizadas</li>
+        </ul>
+      </div>
+      <div>
+        <h4>También he programado en</h4>
+        <ul>
+          <li>Java</li>
+          <li>C y C#</li>
+          <li>Kotlin</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
+
+<section id="contacto" class="cierre">
+  <div class="wrap">
+    <h2 class="titulo">¿Tienes un negocio que todavía trabaja a mano?</h2>
+    <p class="sub">Eso es justo lo que hago: tomar lo que hoy se resuelve con libretas, mensajes sueltos y llamadas, y dejarlo funcionando solo.</p>
+    <div class="acciones">
+      <a class="btn lleno" href="mailto:obex23.com@gmail.com">Escríbeme</a>
+      <a class="btn hueco" href="https://github.com/CMAF23" target="_blank" rel="noopener">Ver mi GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="wrap">
+    <span>Manuel Acevedo · Oaxaca, México</span>
+    <span>Hecho a mano, sin plantillas.</span>
+  </div>
+</footer>
+
+</body>
 </html>
