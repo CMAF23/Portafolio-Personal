@@ -78,6 +78,14 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
 .ver:hover{border-bottom-color:var(--jade)}
 @media (min-width:880px){.obras{grid-template-columns:1fr 1fr}.obra.ancha{grid-column:1/-1}}
 
+.sobre{display:grid;gap:30px;margin-top:30px;grid-template-columns:1fr}
+.sobre > div:first-child p{color:var(--humo);max-width:62ch}
+.sobre > div:first-child p + p{margin-top:14px}
+.sobre > div:first-child b{color:var(--papel);font-weight:600}
+.valores{display:grid;gap:18px}
+.valores h4{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:4px}
+.valores p{color:var(--humo);font-size:.94rem}
+@media (min-width:880px){.sobre{grid-template-columns:1.1fr .9fr;gap:52px}.valores{gap:22px}}
 .saber{display:grid;gap:26px;margin-top:34px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
 .saber h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--jade);margin-bottom:12px}
 .saber ul{list-style:none;padding:0;display:grid;gap:7px;color:var(--humo);font-size:.95rem}
@@ -97,6 +105,7 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
     <a class="marca" href="#"><b>Manuel</b> Acevedo</a>
     <nav>
       <a href="#trabajo">Lo que he construido</a>
+      <a href="#sobre">Quién soy</a>
       <a href="#herramientas">Con qué</a>
       <a href="#contacto">Contacto</a>
       <a href="https://github.com/CMAF23" target="_blank" rel="noopener">GitHub</a>
@@ -196,6 +205,23 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
         <div class="chips"><span class="chip">Automatización</span><span class="chip">Pruebas</span><span class="chip">Linux</span><span class="chip">systemd</span></div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap">
+    <h2 class="titulo">Quién soy</h2>
+    <div class="sobre">
+      <div>
+        <p>Soy Manuel, de Oaxaca, y estudio Ingeniería en Computación. Lo que sé de verdad no lo aprendí en un salón: lo aprendí poniendo sistemas en manos de gente que los necesita para trabajar, y quedándome a arreglarlos cuando algo falla un martes a las siete de la mañana.</p>
+        <p>Trabajo bajo mi propia marca, <b>OBEX</b>. Ahí es donde salen los sistemas de arriba: un negocio me cuenta cómo trabaja hoy, y yo le entrego algo que lo hace solo.</p>
+      </div>
+      <div class="valores">
+        <div><h4>Autodidacta</h4><p>Casi todo lo que uso lo aprendí solo, contra un problema real que tenía que quedar funcionando.</p></div>
+        <div><h4>Le entro a todo el sistema</h4><p>De la pantalla que ve el cliente al servidor, la base de datos, el cobro y el servidor donde vive.</p></div>
+        <div><h4>Cuido lo que entrego</h4><p>Los sistemas que hago traen pruebas automáticas: si algo se rompe, me entero yo antes que el cliente.</p></div>
+      </div>
     </div>
   </div>
 </section>
