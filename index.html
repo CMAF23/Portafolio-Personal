@@ -80,6 +80,9 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
 .hizo{display:grid;gap:8px}
 .hizo div{display:flex;gap:10px;font-size:.94rem}
 .hizo div::before{content:"→";color:var(--jade);flex:none}
+.pantalla{margin:22px 0 0}
+.pantalla img{display:block;width:100%;height:auto;aspect-ratio:1000/625;object-fit:cover;object-position:top;border-radius:14px;border:1px solid var(--linea);background:#0d1211}
+.pantalla figcaption{color:var(--humo);font-size:.78rem;margin-top:9px;letter-spacing:.02em}
 .chips{display:flex;flex-wrap:wrap;gap:7px}
 .chip{font-size:.78rem;color:var(--humo);border:1px solid var(--linea);border-radius:999px;padding:5px 11px}
 .ver{color:var(--jade);text-decoration:none;font-weight:600;font-size:.94rem;border-bottom:1px solid transparent;width:fit-content}
@@ -164,6 +167,13 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
           <span class="vivo">En producción</span>
         </header>
         <p>Una florería con tres sucursales que vendía solo por mensajes sueltos. Hoy tiene tienda en línea, cobro con tarjeta que deposita directo en su banco, un panel donde ven los pedidos del día y un asistente de WhatsApp que toma pedidos solo, a cualquier hora.</p>
+        <figure class="pantalla">
+          <picture>
+            <source type="image/webp" srcset="img/aysel-tienda.webp">
+            <img src="img/aysel-tienda.jpg" width="1000" height="625" loading="lazy" decoding="async" alt="La tienda de Florería Aysel: los ramos del día con su precio">
+          </picture>
+          <figcaption>floreriaaysel.com.mx, funcionando hoy</figcaption>
+        </figure>
         <div class="hizo">
           <div>Tienda con catálogo por sucursal, existencias, ediciones de temporada y entrega a domicilio con pin de mapa.</div>
           <div>Cobro en línea con Stripe Connect: el dinero llega a la cuenta de la florería, no a la mía.</div>
@@ -180,6 +190,13 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
           <span class="vivo">En producción</span>
         </header>
         <p>Un proveedor de internet que perseguía más de mil pagos al mes a mano. Ahora el bot avisa del corte, manda el enlace de pago y reactiva el servicio en cuanto el cliente paga.</p>
+        <figure class="pantalla">
+          <picture>
+            <source type="image/webp" srcset="img/leontelecom.webp">
+            <img src="img/leontelecom.jpg" width="1000" height="625" loading="lazy" decoding="async" alt="El sitio de León Telecom">
+          </picture>
+          <figcaption>leontelecom.com.mx, el sitio que también les rehice</figcaption>
+        </figure>
         <div class="hizo">
           <div>Avisos y recordatorios de pago, con todo dentro de la conversación de WhatsApp.</div>
           <div>Reactivación automática contra la API del proveedor de red, sin que nadie toque un botón.</div>
@@ -194,6 +211,13 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
           <span class="vivo">En producción</span>
         </header>
         <p>Inscripciones en línea para carreras, con el cobro entrando directo a la cuenta del organizador y el corte de caja calculándose solo.</p>
+        <figure class="pantalla">
+          <picture>
+            <source type="image/webp" srcset="img/dinamita.webp">
+            <img src="img/dinamita.jpg" width="1000" height="625" loading="lazy" decoding="async" alt="La página de inscripciones de Dinamita Running">
+          </picture>
+          <figcaption>dinamitarunning.com.mx, funcionando hoy</figcaption>
+        </figure>
         <div class="hizo">
           <div>Registro de corredores, categorías y pago con tarjeta.</div>
           <div>Carta de deslinde firmada desde el teléfono.</div>
