@@ -135,6 +135,16 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
 .cierre .sub{margin-left:auto;margin-right:auto}
 .cierre .acciones{justify-content:center}
 .pie{border-top:1px solid var(--linea);padding:26px 0;color:var(--humo);font-size:.86rem}
+.pie .wrap{align-items:center}
+.aviso{margin-top:18px;border-top:1px solid var(--linea);padding-top:16px}
+.aviso summary{cursor:pointer;color:var(--humo);font-size:.82rem;list-style:none;display:inline-flex;align-items:center;gap:7px;padding:4px 0}
+.aviso summary::-webkit-details-marker{display:none}
+.aviso summary::before{content:"+";color:var(--jade);font-weight:700}
+.aviso[open] summary::before{content:"\2013"}
+.aviso summary:hover{color:var(--papel)}
+.aviso .texto{margin-top:14px;display:grid;gap:11px;max-width:72ch;font-size:.83rem;line-height:1.65}
+.aviso .texto b{color:var(--papel);font-weight:600}
+.aviso .texto a{color:var(--jade)}
 .pie .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 :focus-visible{outline:3px solid var(--jade);outline-offset:3px;border-radius:6px}
 .saltar{position:absolute;left:-9999px;top:0;z-index:40;background:var(--jade);color:#06231A;font-weight:700;padding:12px 20px;border-radius:0 0 12px 0;text-decoration:none}
@@ -418,6 +428,17 @@ section{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--linea)}
   <div class="wrap">
     <span>Manuel Flores · Oaxaca, México</span>
     <span>Hecho a mano, sin plantillas.</span>
+  </div>
+  <div class="wrap">
+    <details class="aviso">
+      <summary>Aviso de privacidad y cookies</summary>
+      <div class="texto">
+        <p><b>Esta página no usa cookies ni te rastrea.</b> No hay analítica, ni píxeles, ni publicidad, y no se guarda nada en tu navegador. Por eso no verás aquí una de esas ventanitas pidiéndote permiso: no hay nada que permitir.</p>
+        <p><b>Lo único que sale de tu equipo</b> es la petición de las tipografías a Google Fonts, que al servirlas ve tu dirección IP, y la petición de la página misma a GitHub Pages, que la guarda en sus registros de servidor. Ninguno de los dos me manda esa información a mí.</p>
+        <p><b>Si me escribes</b> a <a href="mailto:obex23.com@gmail.com">obex23.com@gmail.com</a>, uso tu correo y lo que me cuentes solo para contestarte y, si trabajamos juntos, para llevar el proyecto. No lo vendo, no lo comparto y no te mando publicidad.</p>
+        <p><b>Tus derechos.</b> Puedes pedirme en cualquier momento que te diga qué datos tuyos tengo, que los corrija o que los borre, escribiendo a ese mismo correo. Responsable: Manuel Flores, Oaxaca, México.</p>
+      </div>
+    </details>
   </div>
 </footer>
 
